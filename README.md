@@ -26,8 +26,50 @@ This project aims to deeply analyze the network traffic of popular streaming pla
 * To professionally document project steps and findings on GitHub.
 
 ---
+# 📡 Wireshark Uygulama Trafik Analizi
 
-*Links:*
+Bu dokümanda, Wireshark ile analiz edilen Spotify, Twitch ve YouTube uygulamalarının ağ trafiği yer almaktadır. Tüm trafik, güvenli bağlantı sağlayan *TLSv1.2 protokolü* üzerinden gerçekleşmiştir.
+
+---
+
+## 🎧 Spotify Trafik Özeti
+
+- *Uygulama:* Spotify  
+- *Protokol:* TLSv1.2  
+- *Taşıma Protokolü:* TCP  
+- *Kullanılan Port:* 443 (HTTPS)  
+- *Açıklama:* Spotify uygulaması başlatıldığında, 443 numaralı port üzerinden TLSv1.2 ile şifreli bağlantı kurulmuştur. Veri aktarımı güvenli bir şekilde gerçekleşmiştir.
+
+---
+
+## 📺 Twitch Trafik Özeti
+
+- *Uygulama:* Twitch  
+- *Protokol:* TLSv1.2  
+- *Taşıma Protokolü:* TCP  
+- *Kullanılan Port:* 443 (HTTPS)  
+- *Açıklama:* Twitch uygulaması açıldığında, TLS üzerinden 443 numaralı port kullanılarak şifreli bir bağlantı kurulmuştur.
+
+---
+
+## 📹 YouTube Trafik Özeti
+
+- *Uygulama:* YouTube  
+- *Protokol:* TLSv1.2  
+- *Taşıma Protokolü:* TCP  
+- *Kullanılan Port:* 443 (HTTPS)  
+- *Paket Boyutu:* 124 bytes  
+- *Açıklama:* YouTube uygulamasına ait bir bağlantı analiz edilmiştir. Trafik TLSv1.2 ile 443 portu üzerinden gerçekleşmiş ve 124 byte uzunluğunda bir paket gözlemlenmiştir.
+
+---
+
+## 🔒 Notlar
+
+- Tüm bağlantılar şifrelenmiş olup TLSv1.2 protokolü ile gerçekleşmiştir.  
+- IP adresleri güvenlik ve gizlilik amacıyla rapordan çıkarılmıştır.  
+- 443 portu, HTTPS trafiği için kullanılan standart ve güvenli bağlantı noktasıdır.
+---
+*Links:
 * [GitHub Repository Link] : https://github.com/hilal-tx/STREAM-NG-TRAFF-C-ANALYS-S/edit/main/README.md 
 * Wireshark Official Website: https://www.wireshark.org/
 * Scapy Library: https://scapy.net/
